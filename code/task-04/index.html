@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+
+
+<var> </var>
+
+
+<style>
+
+body {
+	margin: 10px auto;
+	max-width: 100%; /* das müsste die Breite der Webseite sein? */
+    font-family: sans-serif;
+	color: black;
+    background: #8feb1f;
+}
+
+h1 {  /* Überschrift */
+    max-width: 100%; 
+    border: 2px solid;
+    padding: 25px;
+    margin: 15px;
+    text-align: center;
+}
+
+menu {
+    grid-template-columns: max-content;
+    grid-row: auto;
+	padding: 15px;
+    margin: 10px;
+
+    max-width: 100%; 
+    border: 2px solid;
+    padding: 25px;
+    margin: 15px;
+}
+
+.btn { 
+    text-align: center;
+    background: #d7edff;
+    border-color: #cd5529;
+    font-size: larger;
+}
+
+div {
+	grid-template-columns: max-content;
+	padding: 15px;
+    margin: 10px;
+
+    border: 2px solid;
+    background: #1febe8;
+	border-color: #cd5529;
+    text-align: center;
+}
+
+ /* Clear floats after the columns  */
+ .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+/* Auto Grid immer 3 Spalten */
+.grid-container {
+    box-sizing: content-box;
+    width: auto;
+    display: grid;
+    grid-template-columns: auto auto auto; /*das könnte man mit Input regeln */
+    padding: 10px;
+}
+
+.grid-item {
+    background-color: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+}
+
+</style>  
+</head>
+
+
+<body>
+
+    <h1>Gallery Website</h1>
+    
+    <menu>
+        <button id="add-btn" class="btn btn-primary">(+) Box</button>
+        <button id="scaledown-btn" class="btn btn-primary">(-) Box</button>
+        <button id="scaleup-btn" class="btn btn-primary">Scale Up</button>
+        <button id="scaledown-btn" class="btn btn-primary">Scale Down</button>
+    </menu>
+    
+    
+
+    <div class="grid-container">
+        <div class="grid-item">1</div>
+        <div class="grid-item">2</div>
+        <div class="grid-item">3</div>  
+        <div class="grid-item">4</div>
+        <div class="grid-item">5</div>
+        <div class="grid-item">6</div>  
+        <div class="grid-item">7</div>
+        <div class="grid-item">8</div>
+        <div class="grid-item">9</div>  
+        <div class="grid-item">10</div>  
+      </div>
+
+<script src="/libraries/p5js/p5.min.js"></script>
+<script src="/libraries/p5js/libraries/p5.svg.js"></script>
+<script src="sketch.js"></script>
+
+</body>
+</html>

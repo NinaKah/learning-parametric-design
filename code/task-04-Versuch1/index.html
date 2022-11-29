@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sketch1</title>
+  <link rel="stylesheet" type="text/css" href="/libraries/p5js/p5.css">
+
+  
+  <style>
+    * {box-sizing: border-box;}
+    
+    body {
+      font-family: Arial;
+    }
+    
+    .header {
+      /*text-align: center;*/
+      padding: 20px;
+    }
+    
+    /* Create two equal columns that floats next to each other 50% = Breite durch 50 =2// 20% = 4 Spalten*/
+    .column {
+      background-color: rgb(47, 150, 152);
+      float: center;
+      width: 50%;
+      padding: 20px;
+    }
+    
+    /*Abstand zwischen Header und Bildern */
+    .column img {
+      margin-top: 40px; 
+    }
+    
+    /* Clear floats after the columns  */
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    /* Auto Grid immer 3 Spalten */
+    .grid-container {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      background-color: #2196F3;
+      padding: 10px;
+    }
+    .grid-item {
+      background-color: rgba(255, 255, 255, 0.8);
+      border: 1px solid rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      font-size: 30px;
+      text-align: center;
+    }
+    </style>
+
+</head>
+  
+<body>
+
+  <h1>Responsive Gallery</h1>
+
+  <div class="row">
+    <div class="column">
+      <img src="code/task-04/images/Bild1.jpg>
+      <img src="ocean.jpg">
+      <img src="wedding.jpg">
+      </div>
+    </div>
+
+    <div class="column">
+      <img src="underwater.jpg">
+      <img src="ocean.jpg">
+      <img src="wedding.jpg">
+    </div>
+  
+    <div class="column">
+      <img src="wedding.jpg">
+      <img src="rocks.jpg">
+      <img src="falls2.jpg">
+    </div>
+
+    <div class="column">
+      <img src="underwater.jpg">
+      <img src="ocean.jpg">
+      <img src="wedding.jpg">
+    </div>
+
+  </div>
+  
+    <script src="/libraries/p5js/p5.min.js"></script>
+    <script src="/libraries/p5js/libraries/p5.svg.js"></script>
+    <script src="sketch.js"></script>
+
+  
+    <div class="grid-container">
+      <div class="grid-item">1</div>
+      <div class="grid-item">2</div>
+      <div class="grid-item">3</div>  
+      <div class="grid-item">4</div>
+      <div class="grid-item">5</div>
+      <div class="grid-item">6</div>  
+      <div class="grid-item">7</div>
+      <div class="grid-item">8</div>
+      <div class="grid-item">9</div>  
+      <div class="grid-item">10</div>  
+    </div>
+
+  </body>
+
+</html>
