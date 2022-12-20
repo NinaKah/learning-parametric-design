@@ -17,8 +17,10 @@ function setup () {
   //function resetSketch
   button = createButton('Refresh');
   button.position(440, 520);
-  if (button.mousePressed === true) { // davor button.mousePressed (location.reload ());
-    location.reload ()};   
+  //button.mousePressed (location.reload ());
+
+  //if (button.mousePressed === true) { 
+  //  location.reload ()};   
 }
 
 function draw () {
