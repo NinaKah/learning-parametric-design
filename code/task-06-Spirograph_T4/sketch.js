@@ -8,6 +8,7 @@
 
 function setup() {
   let c = createCanvas(sketchWidth, sketchHeight);  
+  pixelDensity (4); // 4fache Auflösung pngs
 
   // Button PNG Download 
     button = createButton('Save as PNG');
@@ -16,8 +17,7 @@ function setup() {
     button.mousePressed(downloadImage);
 
     function downloadImage() {
-      saveCanvas(c, 'currentTime', 'png') 
-      // Dateiname soll currentTime sein
+      save(currentTime + '.png') 
       // Nicht Canvas, sondern nur überlagerte Spirographen in Kreis als tiff/ svg
       // Auflösung besser? 
     } 
