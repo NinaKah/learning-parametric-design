@@ -20,10 +20,13 @@ function setup() {
   button.mousePressed(downloadImage);
   function downloadImage() {save(currentTime + '.png')} 
 
+// Titles Array für 4 verschieden Titel, Statt "improve coding -> Titles abrufen)"
+// -> Vorschleife für Grid + Offset ifs innerhalb des Loops
+
 // Improve coding skills  
 let div1 = createDiv("Improve coding skills");
-  div1.style('font-size', '17px');
-  div1.position(sketchWidth+10, 50+AbstandThema); 
+div1.style('font-size', '17px');
+div1.position(sketchWidth+10, 50+AbstandThema); 
 
     let div1_2 = createDiv("Time spent");
     div1_2.style('font-size', '10px');
@@ -39,18 +42,23 @@ let div1 = createDiv("Improve coding skills");
 
   // Slider Array 1 
     // ?
+  let minValues = [0,1,1]; 
+
   for (var i = 0; i < 3; i++) {
-    var slider = createSlider(1, 5, 0); // createSlider(Min:Zahl, Max:Zahl, Aktueller Wert*:Zahl, Schrittgröße*:Zahl);
+    var slider = createSlider(minValues[i], 5, 0); // createSlider(Min:Zahl, Max:Zahl, Aktueller Wert*:Zahl, Schrittgröße*:Zahl);
     slider.size(170); 
     slider.position(sketchWidth+35, AbstandThema*2 +35 + i*Abstand); 
     Regler.push(slider);    
   }
 
+//
+
 }
 
 function draw() {
   colorMode(RGB);
-  background(200); 
+  //background(200); 
+  clear();
   strokeWeight(); 
 
   fill (210);
